@@ -1,0 +1,85 @@
+No 1
+
+<?php
+$angka = array(98,12,42,13,13,56,100,99);
+$nilai=null;
+
+for ($i=0; $i < 1000 ; $i++) {
+    for ($j=$i+1; $j < count($angka) ; $j++) {
+        if($angka[$i]>$angka[$j]) {
+            $nilai=$angka[$i];
+            $nilai2=$angka[$j];
+        }
+    }
+    
+}
+
+echo $nilai2;
+
+
+
+?>
+=====================================
+No 2
+
+<?php
+
+$huruf = array("A","B","C","D","B","C");
+$nilai=null;
+for ($i=0; $i < 1000 ; $i++) {
+    for ($j=$i+1; $j < count($huruf) ; $j++) {
+        if ($nilai) {
+            break;
+        }
+        elseif($huruf[$i]==$huruf[$j]) {
+            $nilai=$huruf[$i];  
+        }
+    }
+    
+}
+
+if ($nilai!=null) {
+    echo $nilai;
+}else {
+    echo "false";
+}
+
+?>
+
+=============================
+No 3
+
+<?php
+
+$huruf = array(1,2,3,4,5,6);
+$nilai= 4;
+$nilai1=null;
+$nilai2=null;
+for ($i=0; $i < 1000 ; $i++) {
+    if ($nilai1==true && $nilai2==true) {
+        break;
+    }else{
+        for ($j=$i+1; $j < count($huruf) ; $j++) {
+            if ($nilai1==true && $nilai2==true) {
+                break;
+            } elseif (($huruf[$i]+$huruf[$j])==$nilai) {
+                $nilai1=$huruf[$i];  
+                $nilai2=$huruf[$j];
+            } 
+        
+        }
+    }
+    
+    
+}
+
+if ($nilai1!=null && $nilai2!=null) {
+    echo "True (Karena ".$nilai1."+".$nilai2."=".$nilai.")";
+}else {
+    echo "False ( tidak ada pasangan yang dijumlah = ".$nilai." )";
+}
+
+
+
+?>
+
